@@ -3,9 +3,12 @@
 # only Main files contain this front matter, not partials.
 ---
 
-@import "bootstrap";
+/* Bootstrap */
+@import "vendor/bootstrap.min.css";
 
+/*  Partials */
 
-.test-class {
-	
-}
+@import
+  "partials/variables",
+  "partials/mixins",
+    "partials/structure";
