@@ -1,0 +1,80 @@
+/* Mixins */
+
+@mixin transition( $parameters... ) {
+  transition: $parameters;
+  -webkit-transition: $parameters;
+}
+
+@mixin transform( $transforms ) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+@mixin noselect() {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@mixin box( $parameters ) {
+  -webkit-box-shadow: $parameters;
+     -moz-box-shadow: $parameters;
+          box-shadow: $parameters;
+}
+@mixin radius( $parameters ) {
+  -webkit-border-radius: $parameters;
+     -moz-border-radius: $parameters;
+          border-radius: $parameters;
+}
+
+
+@mixin bp( $breakpointMin, $breakpointMax ){
+  @if($breakpointMin and $breakpointMax){
+    @media (max-width: $breakpointMax) and (min-width: $breakpointMin) {
+      @content;
+    }
+  }
+  @if($breakpointMin and not $breakpointMax){
+    @media (min-width: $breakpointMin) {
+      @content;
+    }
+  }
+  @if($breakpointMax and not $breakpointMin){
+    @media (max-width: $breakpointMax) {
+      @content;
+    }
+  }
+}
+
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+
+@mixin bg($file:''){
+  background: url("../images/"+$file) transparent no-repeat center center;
+}
+@mixin bgimg($file:''){
+  background-image: url("../images/"+$file);
+}

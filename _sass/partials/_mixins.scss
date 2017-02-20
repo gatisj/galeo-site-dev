@@ -1,3 +1,5 @@
+/* Mixins */
+
 @mixin transition( $parameters... ) {
   transition: $parameters;
   -webkit-transition: $parameters;
@@ -31,6 +33,26 @@
           border-radius: $parameters;
 }
 
+
+@mixin bp( $breakpointMin, $breakpointMax ){
+  @if($breakpointMin and $breakpointMax){
+    @media (max-width: $breakpointMax) and (min-width: $breakpointMin) {
+      @content;
+    }
+  }
+  @if($breakpointMin and not $breakpointMax){
+    @media (min-width: $breakpointMin) {
+      @content;
+    }
+  }
+  @if($breakpointMax and not $breakpointMin){
+    @media (max-width: $breakpointMax) {
+      @content;
+    }
+  }
+}
+
+
 @mixin placeholder {
   @include optional-at-root('::-webkit-input-placeholder') {
     @content;
@@ -51,8 +73,8 @@
 
 
 @mixin bg($file:''){
-  background: url($file) transparent no-repeat center center;
+  background: url("../images/"+$file) transparent no-repeat center center;
 }
 @mixin bgimg($file:''){
-  background-image: url($file);
+  background-image: url("../images/"+$file);
 }
