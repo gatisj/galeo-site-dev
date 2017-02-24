@@ -1,0 +1,49 @@
+.experts{
+  background:$color-6;
+  color:$color-1;
+  padding: 40px 0 100px;
+  text-align: center;
+  .row2{
+    margin-top: 65px;
+    @include bp(false, $bp2 + 1){
+      margin-top: 0;
+    }
+    h2 {
+      font-size: 34px;
+      font-weight: 300;
+      margin-bottom: 20px;
+      @include bp(false, $bp2 + 1){
+        margin-top: 5px;
+      }
+    }
+    > div{
+      @include bp(false, $bp2 + 1){
+        margin-top: 50px;
+      }
+    }
+  }
+  .dev h2 {
+    color:$color-8;
+  }
+  .dep h2 {
+    color:$color-9;
+  }
+  .res h2 {
+    color:$color-10;
+  }
+  h3 {
+    font-size: 20px;
+    color: $color-3;
+    @include bp(false, $bp2 + 1){
+      font-size: 18px;
+    }
+  }
+  p {
+    font-size: 16px;
+    max-width: 220px;
+    margin: 0 auto;
+    @include bp(false, $bp2 + 1){
+      max-width: 360px;
+    }
+  }
+}

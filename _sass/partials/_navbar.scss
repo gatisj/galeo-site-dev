@@ -1,0 +1,170 @@
+/* Navbar */
+.navbar{
+  &-default{
+    border:0;
+    background: none;
+    height: 73px;
+    margin-bottom: 0;
+    position:absolute;
+    width: 100%;
+    z-index: 10;
+    @include bp(false, $bp2 + 1){
+      max-height: 56px;
+      background: rgba($color-16,0.7);
+    }
+    .navbar{
+      &-nav{
+        border-bottom:3px solid rgba($color-1, 0.17);
+        margin-top:30px;
+        .social{
+          display:none;
+        }
+        @include bp(false, $bp2 + 1){
+          float: none!important;
+          margin-top: 7.5px;
+          background: rgba($color-16,0.7);
+          margin: 0;
+          padding: 15px 0;
+          border:none;
+        }
+        > li{
+          margin-left: 45px;
+          margin-bottom:-3px;
+          &:first-child{
+            margin-left:0;
+          }
+          @include bp(false, $bp2 + 1){
+            float: none;
+            margin-left:0;
+            &.social{
+              display:block;
+              float:none;
+              margin:10px 0;
+              a{
+                margin-left:15px;
+                padding:0;
+              }
+            }
+          }
+          > a{
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 100%;
+            padding: 13px 0;
+            width: auto;
+            text-transform: uppercase;
+            border-bottom:3px solid transparent;
+            color:$color-1;
+            &:hover, &:focus{
+              color:$color-3;
+              @include bp(false, $bp2 + 1){
+                color:$color-1;
+              }
+            }
+            @include bp(false, $bp2 + 1){
+              padding: 15px;
+              margin: 0;
+              width: auto;
+              min-height: auto;
+              border:none;
+            }
+          }
+          &.active > a{
+            border-color:$color-8;
+            &:hover{
+              color:$color-1;
+              background:transparent;
+            }
+            @include bp($bp2 + 2, false){
+              color:$color-1;
+              background: transparent;
+            }
+            @include bp(false, $bp2 + 1){
+              background: transparent;
+              color:$color-3;
+              padding: 15px;
+              margin: 0;
+              width: auto;
+              min-height: auto;
+              &:hover, &:focus{
+                background: transparent;
+                color:$color-3;
+                padding: 15px;
+                margin: 0;
+                width: auto;
+                min-height: auto;
+              }
+            }
+          }
+        }
+      }
+      &-collapse{
+        border-color:transparent;
+        @include box(none);
+        @include bp(false, $bp2 + 1){
+          border-top: 1px solid transparent;
+          @include box(inset 0 1px 0 rgba($color-1,0.1));
+          &.collapse {
+            display: none!important;
+            &.in{
+              display:block !important;
+            }
+          }
+        }
+      }
+      &-toggle{
+        border: none;
+        .icon-bar, &:focus .icon-bar{
+          width: 30px;
+          height: 6px;
+          background: $color-7;
+        }
+        &:hover .icon-bar{
+          background: $color-5;
+        }
+        &:hover, &:focus{
+          background: none;
+        }
+        @include bp(false, $bp2 + 1){
+          display: block;
+        }
+      }
+    }
+  }
+  &-brand{
+    padding-top:40px;
+    @include bp(false, $bp2 + 1){
+      margin-left:-33px!important;
+      left: 50%;
+      position: absolute;
+      padding-top: 10px;
+    }
+  }
+  &-right {
+    margin-right: 0;
+  }
+  &-toggle {
+    margin-top: 5px;
+    margin-bottom: 6px;
+  }
+  &-header{
+    @include bp(false, $bp2 + 1){
+      float: none;
+    }
+  }
+  &-left, &-right{
+    @include bp(false, $bp2 + 1){
+      float: none !important;
+    }
+  }
+  .social{
+    float:right;
+    margin-top:43px;
+    a{
+      margin-left:20px;
+    }
+    @include bp(false, $bp2 + 1){
+      display:none;
+    }
+  }
+}
