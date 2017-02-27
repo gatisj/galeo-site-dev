@@ -8,16 +8,18 @@
 
 
 .footer{
-  background: $color-14;
+  background: $color-17;
   color:$color-3;
   &-left{
     float:left;
+    clear:left;
     margin-right:20px;
     &:last-child{
       margin-right:0;
     }
   }
   &-logos{
+    margin-top:5px;
     @include bp(false, $bp4 + 60){
       clear:left;
       padding-top:20px;
@@ -41,7 +43,7 @@
     }
   }
   &-top {
-    padding-top: 20px;
+    padding-top: 23px;
     padding-bottom: 10px;
     a {
       color:$color-1;
@@ -51,7 +53,7 @@
       }
     }
     p {
-      margin-bottom: 5px;
+      margin-bottom: 8px;
     }
     h2{
       font-size: 16px;
@@ -64,12 +66,28 @@
       font-weight: normal;
     }
   }
+  &-mailphone{
+    font-size:14px;
+    line-height:26px;
+    font-weight:bold;
+    margin-top:9px;
+    a, span{
+      clear:left;
+      color: $color-3;
+      display:block;
+      float:left;
+      text-decoration:none;
+    }
+    a:hover{
+      text-decoration:underline;
+    }
+  }
   &-copy{
     font-size: 12px;
     text-align: right;
     p {
-      margin-bottom: 20px;
-      margin-top: 20px;
+      margin-bottom: 17px;
+      margin-top: 6px;
     }
     a {
       color:$color-3;

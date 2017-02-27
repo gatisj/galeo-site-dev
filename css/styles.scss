@@ -5,15 +5,22 @@
 
 @import "bootstrap/bootstrap",
         "partials/variables",
+        "vendor/selectBoxIt",
 
         "partials/mixins",
 
           "partials/structure",
           
             "partials/navbar",
+
             "partials/block-sky",
             "partials/block-experts",
             "partials/block-partner",
             "partials/block-choice",
             "partials/block-explore",
+            "partials/block-team",
+            "partials/block-apply",
+            "partials/block-slideshow",
+            "partials/block-offer",
+
             "partials/footer";

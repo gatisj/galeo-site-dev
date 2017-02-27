@@ -1,0 +1,96 @@
+.team{
+  background:$color-18;
+  text-align:center;
+  padding:90px 0 56px;
+  cursor:default;
+  &-list{
+    margin:75px 0 83px;
+  }
+  &-item{
+    display:inline-block;
+    width:180px;
+    height:180px;
+    @include radius(50%);
+    background: $color-20;
+    line-height:132px;
+    position:relative;
+    border:6px solid $color-20;
+    margin:-2px 35px 5px;
+    overflow:hidden;
+    @include transition(all 0.2s 0s);
+    .svg-img{
+      vertical-align:bottom;
+      @include transition(all 0.2s 0s);
+    }
+    &.blue{
+      background: $color-21;
+      border-color: $color-21;
+    }
+    &.violet{
+      background: $color-22;
+      border-color: $color-22;
+    }
+    &.green{
+      background: $color-23;
+      border-color: $color-23;
+    }
+    &.light-orange{
+      background: $color-24;
+      border-color: $color-24;
+    }
+    &.gray{
+      background: $color-25;
+      border-color: $color-25;
+    }
+    &:hover{
+      background: $color-2;
+      .svg-img{
+        opacity:0.2;
+      }
+      .team-item-hover{
+        opacity:1;
+      }
+    }
+    &-hover{
+      position:absolute;
+      left:0;
+      top:0;
+      right:0;
+      bottom:0;
+      color:$color-1;
+      font-size:16px;
+      line-height:168px;
+      font-weight:bold;
+      opacity:0;
+      text-transform:uppercase;
+      padding:0 20px;
+      @include transition(all 0.2s 0s);
+      span{
+        line-height:24px;
+        vertical-align:middle;
+        display:inline-block;
+      }
+    }
+    &.noimg{
+      .team-item-hover{
+        opacity:1;
+        font-size:36px;
+        font-weight:300;
+        text-transform:none;
+        line-height:160px;
+        span{
+          line-height:33px;
+        }
+      }
+    }
+  }
+  &-lead{
+    font-size:16px;
+    line-height:22px;
+    color:$color-5;
+    max-width:620px;
+    display:block;
+    margin:0 auto 20px;
+  }
+}
+
