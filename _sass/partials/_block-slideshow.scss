@@ -1,0 +1,18 @@
+.photo-slides{
+  text-align:center;
+  height:272px;
+  overflow:hidden;
+  &-wrapper{
+    margin:0 -10000%;
+  }
+  &-inner{
+    display:inline-block;
+  }
+  &-item{
+    float:left;
+    img{
+      height:272px;
+      display:block;
+    }
+  }
+}

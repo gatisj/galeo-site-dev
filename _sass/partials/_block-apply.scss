@@ -1,0 +1,73 @@
+.apply{
+  text-align:center;
+  padding:30px 0 63px;
+  .block-subtitle{
+    margin-top:2px;
+    margin-bottom:8px;
+  }
+  &-colors{
+    font-weight:700;
+    &-blue{
+      color:$color-27;
+    }
+    &-cyan{
+      color:$color-28;
+    }
+  }
+  &-form{
+    max-width:510px;
+    margin:0 auto;
+    p{
+      font-size:16px;
+      line-height:22px;
+      color:$color-5;
+      margin:0 0 10px;
+    }
+  }
+  &-input{
+    &s{
+      margin-top:32px;
+      text-align:left;
+    }
+    float:left;
+    width:240px;
+    &:nth-child(even){
+      float:right;
+    }
+    @include bp(false, $bp3 - 200){
+      float:none;
+      width:auto;
+      &:nth-child(even){
+        float:none;
+        margin-top:20px;
+      }
+    }
+    &.textarea{
+      float:none;
+      width:auto;
+      margin-top:30px;
+      textarea{
+        overflow:hidden;
+        resize:none;
+        @include bp(false, $bp3 - 200){
+          min-height:80px;
+        }
+      }
+      label{
+        display:block;
+        position:relative;
+        font-weight:400;
+        span{
+          position:absolute;
+          left:0;
+          top:-27px;
+          font-size:12px;
+          font-weight:bold;
+        }
+      }
+    }
+  }
+  .button{
+    margin-top:21px;
+  }
+}

@@ -1,0 +1,40 @@
+.offer{
+  background-repeat:no-repeat;
+  background-position:center top;
+  background-size:cover;
+  color:$color-1;
+  text-align: center;
+  background-attachment:fixed;
+  padding:77px 0 80px;
+  .block-subtitle{
+    font-size:16px;
+    line-height:20px;
+    font-weight:700;
+    max-width:590px;
+    margin:29px auto 0;
+  }
+  &-item{
+    &s{
+      margin:30px auto 0;
+      max-width:760px;
+    }
+    margin-top:35px;
+    width:180px;
+    padding:0 10px;
+    display:inline-block;
+  }
+  &-image{
+    height:85px;
+    line-height:85px;
+    .svg-img{
+      vertical-align:middle;
+      max-height:85px;
+      max-width:160px;
+    }
+  }
+  &-title{
+    margin:10px 0 0;
+    font-size:13px;
+    line-height:18px;
+  }
+}

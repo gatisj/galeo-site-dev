@@ -2,7 +2,7 @@
 
   $(document).ready(function(){
 
-    $('.sky-part').css({minHeight: $(window).height()});
+    $('.sky-part:not(.sky-part-v2)').css({minHeight: $(window).height()});
 
 
     $(window).scroll(function(){
@@ -23,6 +23,12 @@
         $(this).css('background-position', pos);
       });
     }
+
+    $('.select select').selectBoxIt();
+
+    $('.textarea-style').on('change, keyup', function(){
+      $(this).height(0).height( $(this)[0].scrollHeight - 10 );
+    });
 
 
   });

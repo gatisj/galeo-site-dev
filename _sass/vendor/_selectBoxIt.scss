@@ -1,0 +1,143 @@
+/*
+ * jquery.selectBoxIt.css 3.8.1
+ * Author: @gregfranko
+ */
+
+/*
+  Common CSS Properties
+  ---------------------
+  These properties will be applied to any themes that you use
+*/
+
+/* SelectBoxIt container */
+.selectboxit-container {
+  position: relative;
+  display: block;
+  vertical-align: top;
+  text-align:left;
+}
+
+/* Styles that apply to all SelectBoxIt elements */
+.selectboxit-container * {
+  /* Prevents text selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  outline: none;
+  white-space: nowrap;
+}
+
+/* Button */
+.selectboxit-container .selectboxit {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  border-bottom: 4px solid $color-3;
+  width:100%!important;
+  font-size:14px;
+  line-height:45px;
+  padding-right:20px;
+  &:before{
+    position:absolute;
+    content:'';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 11px 6.5px 0 6.5px;
+    border-color: #a1a1a1 transparent transparent transparent;
+    right: 0;
+    top:50%;
+    margin-top:-5px;
+  }
+}
+
+/* Height and Vertical Alignment of Text */
+.selectboxit-container span, .selectboxit-container .selectboxit-options a {
+  display: block;
+}
+
+/* Focus pseudo selector */
+.selectboxit-container .selectboxit:focus {
+  outline: 0;
+}
+
+/* Disabled Mouse Interaction */
+.selectboxit.selectboxit-disabled, .selectboxit-options .selectboxit-disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+
+/* Button Text */
+.selectboxit-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width:100%!important;
+}
+
+.selectboxit .selectboxit-option-icon-container {
+  margin-left: 5px;
+}
+
+/* Options List */
+.selectboxit-container .selectboxit-options {
+  min-width: 100%;  /* Minimum Width of the dropdown list box options */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: none;
+  z-index: 9999999999999;
+  border:1px solid $color-3;
+  background:$color-1;
+}
+
+/* Individual options */
+.selectboxit-option .selectboxit-option-anchor{
+  padding: 8px 10px;
+  cursor:pointer;
+  font-size:14px;
+  background:transparent;
+  @include transition(background 0.2s 0s);
+  color:$color-4;
+  &:hover{
+    color:$color-4;
+    background: $color-18;
+    text-decoration: none;
+  }
+}
+
+/* Individual Option Optgroup Header */
+.selectboxit-option, .selectboxit-optgroup-header {
+  margin: 0;
+  list-style-type: none;
+}
+
+/* Drop Down optgroup headers */
+.selectboxit-optgroup-header {
+  font-weight: bold;
+}
+
+/* Drop Down optgroup header hover psuedo class */
+.selectboxit-optgroup-header:hover {
+  cursor: default;
+}
+
+.selectboxit-rendering {
+  display: inline-block !important;
+  *display: inline !important;
+  zoom: 1 !important;
+  visibility: visible !important;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
